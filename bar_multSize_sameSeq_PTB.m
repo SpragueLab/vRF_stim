@@ -30,7 +30,7 @@ Screen('Preference','SyncTestSettings' ,0.01); %maxStddev in sec
 p.subj = subj;
 p.run = run;
 
-p.TR = 1.3; % 1300 ms, our typical 4x multiband 2 mm iso retinotopy seq
+p.TR = .75; % 1300 ms, our typical 4x multiband 2 mm iso retinotopy seq
 
 p.filename = sprintf('./data/%s_r%02.f_RF_bar_multSize_%s.mat',p.subj,p.run,datestr(now,30));
 if ~exist('./data','dir')
@@ -104,7 +104,7 @@ end
 
 
 p.n_steps     = 12; % to match previous
-p.step_dur    = 2*p.TR;% 2.6; % sec
+p.step_dur    = 3*p.TR;% 2.25; % sec
 p.n_segments  = 3; % for now
 p.dot_speed   = 1.6; % deg/s
 p.dot_life_sec= 0.05;% seconds
