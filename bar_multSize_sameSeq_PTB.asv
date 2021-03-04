@@ -67,16 +67,16 @@ if nargin < 3
     p.seq = [4       2
              6       3
              3.5     2
-             2       4
+             5       4
              7.5     2
              5.5     3
              4.5     1
              3       3
              6.5     1
-             5       4
+             2       4
              7       4
              2.5     1];
-    %p.seq(:,1) = p.seq(:,1)*p.bar_width_multiplier;
+    p.seq(:,1) = p.seq(:,1)*p.bar_width_multiplier;
 
 else
     p.seq = seq;
