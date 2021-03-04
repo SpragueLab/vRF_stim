@@ -44,7 +44,7 @@ rng(ctime);
 % if demo, do fast stimuli and fast wait at beginning
 p.scanner = 1;
 
-p.do_et = 1;
+p.do_et = 0;
 
 if p.do_et == 1
     p.eyedatafile = sprintf('%s_RF%02.f',p.subj(1:min(length(p.subj),3)),p.run);
@@ -112,7 +112,7 @@ p.dot_life    = round(p.dot_life_sec/(1/p.refresh_rate)); % frames - used for dr
 p.coh_sample  = 0.75; % coherence of sample stimulus (outer bars)
 p.coh_step    = 0.075; % how much to step up/down in staircase
 p.dot_color   = [1 1 1;0 0 0]*255; % half black, half white to improve contrast
-p.segment_gap = 0.25; % deg, gap between segments - determines SIZE of rect, will be centered on a known point, so will be gap/2 at top/bottom/left/right too
+p.segment_gap = 0; % deg, gap between segments - determines SIZE of rect, will be centered on a known point, so will be gap/2 at top/bottom/left/right too
 p.bar_extent  = 1;   % % of square the bar subtends/100 (NOTE: gap will be drawn at top/bottom or left/right of entire bar, too)
 p.dot_density = 10; % per deg^2 (seems high...but from biorxiv... - 124 dots per 4 deg^2
 p.dot_size_deg= 0.075; % deg
