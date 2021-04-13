@@ -24,6 +24,7 @@
 
 
 
+
 function bar_multSize_sameSeq_PTB(subj,run,seq)
 
 % to avoid super-aggressive timing tests on windows:
@@ -108,7 +109,7 @@ if p.run>1 && exist(sprintf('./data/%s_r%02.f_lastCoh.mat',p.subj,p.run-1),'file
     p.coh_init = init_coh;
     clear init_coh;
 else
-    p.coh_init    = 0.55; % TODO: load from file....
+    p.coh_init    = 0.75; % TODO: load from file....
 end
 
 
