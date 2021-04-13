@@ -233,7 +233,7 @@ p.resolution_actual = [rect(3) rect(4)]; % pixels
 p.screen_width = p.screen_height * p.resolution_actual(1)/p.resolution_actual(2); % TCS updated 4/13/2021 - ensure centered presentation
 p.screen_height_deg = 2*atan2d(p.screen_height/2,p.viewing_distance);
 p.screen_width_deg  = 2*atan2d(p.screen_width/2, p.viewing_distance);
-p.ppd = p.resolution(2)/p.screen_height_deg;  % used to convert rects, positions later on
+p.ppd = p.resolution_actual(2)/p.screen_height_deg;  % used to convert rects, positions later on
 
 p.scr_center = p.resolution_actual/2;  % could do offset centers, etc?
 
