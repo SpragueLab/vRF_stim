@@ -511,9 +511,9 @@ for ss = 1:size(p.seq,1)
                     p.rt(trial_counter) = time_stamp-p.step_start(trial_counter);
 
                     this_resp = find(p.resp_keys==resp);
-                    if (p.seq(ss,2)==3)||(p.seq(ss,2)==4)
-                        this_resp = mod(this_resp,2)+1;
-                    end
+%                     if (p.seq(ss,2)==3)||(p.seq(ss,2)==4)
+%                         this_resp = mod(this_resp,2)+1;
+%                     end
 
                     p.resp(trial_counter) = this_resp;%find(p.resp_keys==resp);
                     p.correct(trial_counter) = this_resp==p.corr_resp(trial_counter);%p.resp(trial_counter)==p.corr_resp(trial_counter);
